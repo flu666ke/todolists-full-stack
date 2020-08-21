@@ -13,20 +13,20 @@ const app: Application = express();
 import router from './core/route/main-route';
 
 mongoose
- .connect(process.env.DATABASE!, {
-  useNewUrlParser: true,
-  useFindAndModify: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
- })
- .then(() => console.log('DB connected'))
- .catch((err: any) => console.log('DB connection ERROR: ', err));
+  .connect(process.env.DATABASE!, {
+    useNewUrlParser: true,
+    useFindAndModify: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then(() => console.log('DB connected'))
+  .catch((err: any) => console.log('DB connection ERROR: ', err));
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 // app.use(cors()); // allow all origins
 if (process.env.NODE_ENV === 'development') {
- app.use(cors({ origin: `http://localhost:3000` }));
+  app.use(cors({ origin: `http://localhost:3000` }));
 }
 
 router(app);

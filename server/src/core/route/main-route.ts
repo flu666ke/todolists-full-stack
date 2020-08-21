@@ -4,7 +4,7 @@ import ModuleTodoList_Routes from '../../modules/module.todo-list/routes/todo-li
 import ModuleTask_Routes from '../../modules/module.task/routes/task.routes';
 
 export default (app: Application) => {
- // Connect all modules routes
- ModuleTodoList_Routes(app);
- ModuleTask_Routes(app);
+  // Connect all modules routes
+  ModuleTodoList_Routes(app);
+  ModuleTask_Routes(app);
 };
