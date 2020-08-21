@@ -30,9 +30,9 @@ class TaskService {
   }
 
   public async deleteTask(id: string) {
-    const deleteDtask = await TaskModel.findByIdAndDelete(id);
+    const deletedTask = await TaskModel.findByIdAndDelete(id);
 
-    return deleteDtask;
+    return deletedTask;
   }
 
   public async deleteTasks(todoListId: string) {

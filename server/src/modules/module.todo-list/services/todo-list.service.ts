@@ -17,9 +17,9 @@ class TodoListService {
   }
 
   public async deleteTodoList(id: string) {
-    const alltodos = await TodoListModel.findByIdAndDelete(id);
+    const deletedTodoList = await TodoListModel.findByIdAndDelete(id);
 
-    return alltodos;
+    return deletedTodoList;
   }
 }
 
